@@ -1,7 +1,10 @@
 package metier;
 
 import dao.IDao;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
+@Component("metier")
 public class MetierImpl implements Imetier{
     private IDao dao;
 
@@ -9,8 +12,6 @@ public class MetierImpl implements Imetier{
         this.dao = dao;
     }
 
-    public MetierImpl() {
-    }
 
     @Override
     public double calcul() {
